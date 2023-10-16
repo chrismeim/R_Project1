@@ -55,7 +55,7 @@ CMG_data <- na.omit(CMG_data)
 CMG_mean <- mean(CMG_data$returns)
 print(CMG_mean)
 
-TXRH_data <- compustat_data[compustat_data$tic == "TXRH", ]
+TXRH_data <- compustat_data[compustat_data$tic == "TXRH", ]              #TXRH_data 
 TXRH_data <- TXRH_data[, c("Date", "conm", "prccd")]
 TXRH_data$returns <- (TXRH_data$prccd / lag(TXRH_data$prccd)) - 1
 TXRH_data <- na.omit(TXRH_data)
